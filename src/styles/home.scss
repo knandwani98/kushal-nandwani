@@ -1,0 +1,46 @@
+.main {
+  section {
+    min-height: 80vh;
+  }
+
+  .hero {
+    h1 {
+      font-size: 8rem;
+      margin-block: -1.5rem;
+      font-weight: bolder;
+    }
+
+    h2 {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .greet {
+      font-size: 2rem;
+      color: var(--orange);
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+
+    p {
+      font-size: 1.6rem;
+      font-weight: 300;
+    }
+
+    .content {
+      width: 65%;
+    }
+
+    .img {
+      width: 35%;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 100% !important;
+      object-fit: cover;
+    }
+  }
+}

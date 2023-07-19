@@ -1,0 +1,117 @@
+.projects {
+  overflow-y: hidden !important;
+  height: 80vh !important;
+
+  .cards,
+  .list-container,
+  header {
+    background-color: inherit;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .cards {
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+
+    .preview {
+      aspect-ratio: 1;
+      transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      overflow: hidden;
+      border-radius: 50px;
+      margin-left: -2.5rem;
+
+      img {
+        width: 100%;
+        border-radius: 50px;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        opacity: 0;
+
+        &.active {
+          opacity: 1;
+          transform: scale(1.05);
+          transition: all 700ms ease;
+        }
+      }
+    }
+
+    .list-container {
+      margin-right: 4rem;
+      overflow-y: auto;
+      height: 80vh;
+      position: relative;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      header {
+        position: fixed;
+        background-color: inherit;
+        width: 100%;
+        z-index: 9;
+        hr {
+          border-width: 2px;
+        }
+      }
+    }
+
+    .lists {
+      gap: 2rem;
+    }
+
+    .card {
+      position: relative;
+
+      strong {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--orange);
+      }
+
+      .title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        transition: transform 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      p {
+        font-weight: 300;
+        color: var(--grey);
+      }
+
+      .tabs {
+        justify-content: flex-end;
+        gap: 0.5rem;
+        position: absolute;
+        right: 1rem;
+
+        .link {
+          font-size: 0.8rem;
+          font-weight: 500;
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          border-radius: 50px;
+          transition: background-color 2s ease-out;
+          border: 1px solid var(--orange);
+        }
+      }
+
+      &:hover {
+        .title {
+          transform: translateX(2rem);
+          color: var(--orange);
+        }
+
+        hr {
+          border-color: var(--orange);
+        }
+      }
+    }
+  }
+}

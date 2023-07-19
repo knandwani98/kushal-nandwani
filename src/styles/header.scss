@@ -1,0 +1,52 @@
+.top-header {
+  height: 20vh;
+  padding-block: 2rem;
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .top-menu ul {
+    gap: 0.5rem;
+
+    li {
+      margin: 1rem 0;
+
+      &:first-child {
+        margin-left: -1rem;
+      }
+
+      .link {
+        padding: 0.5rem 1rem;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.5s ease-out;
+        border-radius: 25%;
+
+        &:hover,
+        &.active {
+          border-color: var(--orange);
+        }
+      }
+    }
+
+    #gh:hover {
+      border-color: var(--green);
+    }
+
+    #twitter:hover {
+      border-color: var(--blue);
+    }
+
+    #ig:hover {
+      border-color: var(--ig);
+    }
+  }
+
+  .theme-btn {
+    background-color: unset;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+}
